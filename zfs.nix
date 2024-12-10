@@ -9,8 +9,20 @@
   };
 
   # Pool Mountpoints
-  fileSystems."/home-nas" = {
-    device = "home-nas";
+  fileSystems."/mnt/FamilyPhotos" = {
+    device = "home-nas/FamilyPhotos";
+    fsType = "zfs";
+  };
+  fileSystems."/mnt/Gackup" = {
+    device = "home-nas/Gackup";
+    fsType = "zfs";
+  };
+  fileSystems."/mnt/Garchive" = {
+    device = "home-nas/Garchive";
+    fsType = "zfs";
+  };
+  fileSystems."/mnt/General" = {
+    device = "home-nas/General";
     fsType = "zfs";
   };
 }
