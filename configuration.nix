@@ -58,6 +58,7 @@
   environment.systemPackages = with pkgs; [
     git
     helix
+    parted
   ];
 
   # Environmental Variables
