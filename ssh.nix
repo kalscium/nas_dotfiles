@@ -5,7 +5,7 @@
     enable = true;
 
     # Open ports in the firewall
-    ports = [ 22 ];
+    ports = [ 23 ];
     openFirewall = true;
 
     settings = {
