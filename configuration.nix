@@ -26,8 +26,7 @@
   networking = {
     hostName = "home-nas"; # Defines your hostname
     hostId = "e1f6e7af"; # Defines your hostid
-    # wireless.enable = true; # Enables wireless support via `wpa_supplicant`
-    networkmanager.enable = true; # Enables networking (like wifi)
+    useDHCP = true;
   };
 
   time.timeZone = "Australia/Melbourne"; # time zone
@@ -59,6 +58,7 @@
     git
     helix
     parted
+    jmtpfs
   ];
 
   # Environmental Variables
