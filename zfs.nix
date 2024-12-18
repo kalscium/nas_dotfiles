@@ -24,4 +24,8 @@
     device = "home-nas/General";
     fsType = "zfs";
   };
+  fileSystems."/mnt/DeviceBackup" = {
+    device = "home-nas/DeviceBackup";
+    fsType = "zfs";
+  };
 }
