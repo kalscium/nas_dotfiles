@@ -59,7 +59,14 @@
     helix
     parted
     jmtpfs
+
+    # for mount iOS devices
+    ifuse
+    libimobiledevice
   ];
+
+  # Enable support for iOS devices
+  services.usbmuxd.enable = true;
 
   # Environmental Variables
   environment.variables = { };
