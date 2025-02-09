@@ -1,6 +1,6 @@
 {
-  # Import the zfs pool at boot
-  boot.zfs.extraPools = [ "home-nas" ];
+  # Import the zfs pools at boot
+  boot.zfs.extraPools = [ "kalnas" "kalcloud" ];
 
   # The datasets to decrypt on boot (none as blocking on boot is un-desired)
   boot.zfs.requestEncryptionCredentials = [];
@@ -11,21 +11,35 @@
     trim.enable = true;
   };
 
-  # Pool Mountpoints
-  fileSystems."/mnt/FamilyPhotos" = {
-    device = "home-nas/FamilyPhotos";
+  # NAS Pool Mountpoints
+  fileSystems."/nas/FamilyPhotos" = {
+    device = "kalnas/FamilyPhotos";
     fsType = "zfs";
   };
-  fileSystems."/mnt/Garchive" = {
-    device = "home-nas/Garchive";
+  fileSystems."/nas/Misc" = {
+    device = "kalnas/Misc";
     fsType = "zfs";
   };
-  fileSystems."/mnt/General" = {
-    device = "home-nas/General";
+  fileSystems."/nas/DeviceBackup" = {
+    device = "kalnas/DeviceBackup";
     fsType = "zfs";
   };
-  fileSystems."/mnt/DeviceBackup" = {
-    device = "home-nas/DeviceBackup";
+
+  # Cloud Pool Mountpoints
+  fileSystems."/cloud/jOffice" = {
+    device = "kalcloud/jOffice";
+    fsType = "zfs";
+  };
+  fileSystems."/cloud/jPersonal" = {
+    device = "kalcloud/jPersonal";
+    fsType = "zfs";
+  };
+  fileSystems."/cloud/Media" = {
+    device = "kalcloud/Media";
+    fsType = "zfs";
+  };
+  fileSystems."/cloud/Misc" = {
+    device = "kalcloud/Misc";
     fsType = "zfs";
   };
 }

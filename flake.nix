@@ -13,7 +13,7 @@
       };
     in
     {
-      home-nas = nixpkgs.lib.nixosSystem {
+      kalver = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit pkgs; };
         modules = [
           ./configuration.nix

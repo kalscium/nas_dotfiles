@@ -24,7 +24,7 @@
 
   # Networking
   networking = {
-    hostName = "home-nas"; # Defines your hostname
+    hostName = "kalver"; # Defines your hostname
     hostId = "e1f6e7af"; # Defines your hostid
     useDHCP = true;
   };
