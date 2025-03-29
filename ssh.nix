@@ -17,5 +17,5 @@
   };
 
   # Basic SSH Protection
-  services.fail2ban.enable = true;
+  services.fail2ban.enable = false; # it's annoying, I'll turn it on if I need
 }
