@@ -1,5 +1,5 @@
 {
-  description = "kalscium's home-brew NAS NixOS system configurations";
+  description = "kalscium's second home-brew NAS NixOS system configurations";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
@@ -13,7 +13,7 @@
       };
     in
     {
-      kalver = nixpkgs.lib.nixosSystem {
+      nas = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit pkgs; };
         modules = [
           ./configuration.nix

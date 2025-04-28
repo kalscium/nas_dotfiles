@@ -9,14 +9,8 @@
   boot.loader = {
     grub = {
       enable = true;
-      device = "nodev";
-      efiSupport = true;
+      device = "/dev/sda";
       useOSProber = true;
-    };
-
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
     };
   };
 
@@ -24,9 +18,9 @@
 
   # Networking
   networking = {
-    hostName = "kalver"; # Defines your hostname
-    hostId = "e1f6e7af"; # Defines your hostid
-    useDHCP = true;
+    hostName = "nas"; # Defines your hostname
+    hostId = "e1f677bf"; # Defines your hostid
+    networkmanager.enable = true; # Enables networking (like wifi)
   };
 
   time.timeZone = "Australia/Melbourne"; # time zone
