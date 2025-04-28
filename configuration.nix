@@ -59,6 +59,12 @@
     helix
     parted
     jmtpfs
+    transmission_4
+    wget
+    unzip
+    p7zip
+    zpaq
+    brightnessctl
 
     # for mount iOS devices
     ifuse
