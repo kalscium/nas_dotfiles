@@ -1,6 +1,6 @@
 {
   # Import the zfs pools at boot
-  boot.zfs.extraPools = [ ];
+  boot.zfs.extraPools = [ "nas" ];
 
   # The datasets to decrypt on boot (none as blocking on boot is un-desired)
   boot.zfs.requestEncryptionCredentials = [];
@@ -12,4 +12,12 @@
   };
 
   # NAS Pool Mountpoints
+  fileSystems."/nas/Important" = {
+    device = "nas/Important";
+    fsType = "zfs";
+  };
+  fileSystems."/nas/Temporary" = {
+    device = "nas/Temporary";
+    fsType = "zfs";
+  };
 }
