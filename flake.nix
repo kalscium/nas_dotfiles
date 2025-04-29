@@ -22,6 +22,7 @@
           ./users.nix
           ./hardware-configuration.nix
           ./firewall.nix
+          ./tailscale.nix
         ];
       };
     };

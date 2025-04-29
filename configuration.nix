@@ -67,7 +67,4 @@
 
   # Enable support for iOS devices
   services.usbmuxd.enable = true;
-
-  # Environmental Variables
-  environment.variables = { };
 }
