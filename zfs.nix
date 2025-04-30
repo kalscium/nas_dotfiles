@@ -12,12 +12,8 @@
   };
 
   # NAS Pool Mountpoints
-  fileSystems."/nas/Important" = {
-    device = "nas/Important";
-    fsType = "zfs";
-  };
-  fileSystems."/nas/Temporary" = {
-    device = "nas/Temporary";
+  fileSystems."/nas" = {
+    device = "nas/data";
     fsType = "zfs";
   };
 }

@@ -17,5 +17,4 @@ zpool create \
 
 # Initialise the zfs datasets
 zfs create -o refreservation=10G -o mountpoint=none nas/reserved
-zfs create -o mountpoint=legacy nas/Important
-zfs create -o mountpoint=legacy nas/Temporary
+zfs create -o mountpoint=legacy nas/data
