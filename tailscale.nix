@@ -4,7 +4,11 @@
   environment.systemPackages = [ pkgs.tailscale ];
   
   # Enable the tailscale service
-  services.tailscale.enable = true;
+  services.tailscale = {
+    enable = true;
+    openFirewall = true;
+    useRoutingFeatures = "both";
+  };
 
   # Create a oneshot job to authenticate to Tailscale
   systemd.services.tailscale-autoconnect = {
@@ -30,12 +34,7 @@
       fi
 
       # otherwise authenticate with tailscale
-      ${tailscale}/bin/tailscale up -authkey $(cat /home/server/tailscale.key) # I don't want to use sops-nix or leak keys
+      ${tailscale}/bin/tailscale up --advertise-exit-node -authkey $(cat /home/server/tailscale.key) # I don't want to use sops-nix or leak keys
     '';
-  };
-
-  networking.firewall = {
-    trustedInterfaces = [ "tailscale0" ];
-    allowedUDPPorts = [ config.services.tailscale.port ];
   };
 }
