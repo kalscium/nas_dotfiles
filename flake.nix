@@ -17,6 +17,7 @@
         specialArgs = { inherit pkgs; };
         modules = [
           ./configuration.nix
+          ./jellyfin.nix
           ./ssh.nix
           ./zfs.nix
           ./users.nix
