@@ -18,6 +18,7 @@
         modules = [
           ./configuration.nix
           ./jellyfin.nix
+          ./immich.nix
           ./ssh.nix
           ./zfs.nix
           ./users.nix
